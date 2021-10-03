@@ -1,6 +1,8 @@
 float speed = 1;
 float circleX = 0;
 
+int gapSize = 10;
+
 void setup() {
   size(400, 400);
 }
@@ -8,7 +10,7 @@ void setup() {
 void draw() {
  background(#E9C1FF);
  line(width/2, height/2, mouseX, mouseY);
-  fill(255);
+  fill(500);
   ellipse(circleX,height/2,20,  20);
   circleX = circleX +speed;// could be shortened to circleX += speed
 
