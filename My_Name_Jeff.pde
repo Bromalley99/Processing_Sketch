@@ -1,7 +1,7 @@
 float speed = 1;
 float circleX = 0;
 
-int gapSize = 10;
+
 
 void setup() {
   size(400, 400);
