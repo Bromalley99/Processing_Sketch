@@ -1,8 +1,9 @@
 float speed = 1;
 float circleX = 0;
-
-
-
+float brushColor = #FC78E4;
+boolean brushIsEraser = false;
+float brushTransparency; 
+float brushSize = 10;
 void setup() {
   size(400, 400);
 }
@@ -159,5 +160,20 @@ void draw() {
     //circleX = 0;
     speed *= -3;
   }
-
+  if (brushIsEraser ==true) {
+    brushColor = 255; //brush color is white
+    stroke(255);
+    strokeWeight(120);  // Thicker
+  } else {
+    brushColor = mouseX/2; //brush is color
+    stroke(brushColor*2, brushColor, 50, 20);
+    strokeWeight(20);  // Thicker
+  }
+   stroke(brushColor*2, brushColor, 50, 20);
+  strokeWeight(16);  // Thicker
+  brushTransparency = mouseY/2;
+  brushSize = mouseX/10;
+  fill(#4549DE, brushTransparency);
+  line(mouseX, mouseY, width-mouseX, height-mouseY);
+  fill(brushColor);
 }
