@@ -123,5 +123,41 @@ void draw() {
     //circleX = 0;
     speed *= -3;
   }
+ ellipse(circleX,height/2,80,  80);
+  circleX = circleX +speed;// could be shortened to circleX += speed
+
+  if (circleX > width){
+    //circleX = 0;
+    speed *= -10;
+  }
+    if (circleX < 0){
+    //circleX = 0;
+    speed *= -4;
+  }
+  //these two if statements could be combined into one
+  // < means less then, > means greater then, == means equal, <= less then or equal, >=greater then or equal
+  // && means and, || means or, ! means not
+    if ((circleX > width)||(circleX < 0)){
+    //circleX = 0;
+    speed *= -3;
+  }
+ ellipse(circleX,height/2,300,  300);
+  circleX = circleX +speed;// could be shortened to circleX += speed
+
+  if (circleX > width){
+    //circleX = 0;
+    speed *= -10;
+  }
+    if (circleX < 0){
+    //circleX = 0;
+    speed *= -4;
+  }
+  //these two if statements could be combined into one
+  // < means less then, > means greater then, == means equal, <= less then or equal, >=greater then or equal
+  // && means and, || means or, ! means not
+    if ((circleX > width)||(circleX < 0)){
+    //circleX = 0;
+    speed *= -3;
+  }
 
 }
