@@ -11,8 +11,11 @@ void draw() {
  background(#E9C1FF);
  line(width/2, height/2, mouseX, mouseY);
   fill(500);
+   line(width/4, height/4, mouseX, mouseY);
+  fill(500);
   ellipse(circleX,height/2,60,  60);
   circleX = circleX +speed;// could be shortened to circleX += speed
+
 
   if (circleX > width){
     //circleX = 0;
